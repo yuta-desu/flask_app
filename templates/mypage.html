@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block title %}初めてのHTML{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/css/mypage.css">
+{% endblock %}
+{% block content %}
+    <div class="container">
+
+        <h1 class="title">Hello World!</h1>
+
+        <section class="profile-section">
+            <h2>プロフィール</h2>
+            <p>こんにちは！私はTaroです。</p>
+
+            <ul class="profile-list">
+                <li>趣味: プログラミング</li>
+                <li>特技: Python</li>
+            </ul>
+
+            <a class="my-link" href="https://example.com" target="_blank">私のサイト</a>
+
+            <img class="profile-img" src="../static/image/mypage.jpg" alt="プロフィール画像">
+        </section>
+
+        <section class="table-section">
+            <h2>メンバー一覧</h2>
+            <table class="info-table">
+                <tr>
+                    <th>名前</th>
+                    <th>年齢</th>
+                </tr>
+                <tr>
+                    <td>Taro</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Jiro</td>
+                    <td>28</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="form-section">
+            <h2>フォーム</h2>
+            <form class="my-form">
+                <label>名前: <input type="text" name="name"></label><br>
+                <label>年齢: <input type="number" name="age"></label><br>
+                <input class="btn" type="submit" value="送信">
+            </form>
+        </section>
+
+    </div>
+{% endblock %}

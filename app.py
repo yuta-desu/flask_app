@@ -1,22 +1,24 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def home():
-    return "Hello, Flask!"
+    return render_template('home.html')
 
-@app.route("/mypage")
-def mypage():
-    return "マイページです。"
-
-@app.route("/about")
+@app.route('/about')
 def about():
-    return "会社概要です。"
+    return render_template('about.html')
 
-@app.route("/contact")
-def contact():
-    return "お問い合わせ画面です。"
+@app.route('/profile/<username>')
+def profile(username):
+    age = 22
+    hobbies = ['プログラミング', '音楽', '映画鑑賞']
+    blood_type = "O型"
+    gender = "男"
+    return render_template('profile.html', username=username, age=age, hobbies=hobbies, blood_type=blood_type, gender=gender )
 
-if __name__ == "__main__":
-    app.run(debug=True)
+
+@app.route('/mypage')
+def mypage():
+    return render_template('mypage.html')

@@ -1,0 +1,190 @@
+/* ------------------------------
+    基本設定（モバイルファースト）
+------------------------------ */
+body {
+    font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+/* タイトル */
+.title {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    color: #2c7be5;
+}
+
+/* プロフィール */
+.profile-section h2 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.profile-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.profile-list li {
+    padding: 5px 0;
+}
+
+/* リンク */
+.my-link {
+    display: inline-block;
+    margin: 12px 0;
+    color: #2c7be5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.my-link:hover {
+    text-decoration: underline;
+}
+
+/* 画像（モバイルは幅いっぱいに） */
+.profile-img {
+    display: block;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* テーブル */
+.table-section {
+    margin-top: 30px;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.info-table th {
+    background: #2c7be5;
+    color: white;
+    padding: 10px;
+}
+
+.info-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.info-table tr:nth-child(even) {
+    background: #f0f6ff;
+}
+
+/* フォーム */
+.my-form label {
+    display: block;
+    margin: 10px 0;
+}
+
+.my-form input[type="text"],
+.my-form input[type="number"] {
+    padding: 6px 10px;
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ボタン */
+.btn {
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #2c7be5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #1a5fc3;
+}
+
+
+/* ------------------------------
+    画面幅 768px〜（タブレット）
+------------------------------ */
+@media (min-width: 768px) {
+
+    .container {
+        width: 80%;
+        padding: 30px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .info-table {
+        font-size: 1rem;
+    }
+
+    .my-form input[type="text"],
+    .my-form input[type="number"] {
+        width: 60%;
+    }
+
+    .profile-img {
+        max-width: 220px;
+    }
+}
+
+/* ------------------------------
+    画面幅 1024px〜（PC）
+------------------------------ */
+@media (min-width: 1024px) {
+
+    .container {
+        width: 70%;
+        max-width: 900px;
+        padding: 40px;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    /* プロフィールを横並びレイアウトに */
+    .profile-section {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .profile-section p,
+    .profile-list,
+    .my-link {
+        font-size: 1rem;
+    }
+    
+    .profile-img {
+        max-width: 260px;
+    }
+
+    /* フォーム幅調整 */
+    .my-form input[type="text"],
+    .my-form input[type="number"] {
+        width: 40%;
+    }
+}
